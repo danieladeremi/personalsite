@@ -890,11 +890,13 @@ button,
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .project {
-    flex: 1 1 45%; /* 2 items per row on desktop */
-    min-width: 280px; /* prevents thumbnails from shrinking too much */
+    flex: 1 1 300px; /* fixed smaller size */
+    max-width: 300px; /* keeps them from getting too big */
+    text-align: center;
 }
 
 .project img {
@@ -907,5 +909,7 @@ button,
 @media (max-width: 768px) {
     .project {
         flex: 1 1 100%;
+        max-width: 100%;
     }
 }
+
