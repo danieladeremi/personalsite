@@ -885,3 +885,27 @@ button,
       left: auto;
       margin: 1em 0 0 0;
       position: relative; } }
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    flex: 1 1 45%; /* 2 items per row on desktop */
+    min-width: 280px; /* prevents thumbnails from shrinking too much */
+}
+
+.project img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Stack vertically on mobile */
+@media (max-width: 768px) {
+    .project {
+        flex: 1 1 100%;
+    }
+}
